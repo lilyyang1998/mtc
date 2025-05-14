@@ -1,0 +1,4 @@
+.DS_Store
+.env
+secrets*
+running_simplify_prompt.py
