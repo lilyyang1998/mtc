@@ -81,7 +81,7 @@ def call_openai_api(text, prompt, model_name):
         response = openai_client.chat.completions.create(
             model=OPENAI_MODELS[model_name],
             messages=messages,
-            temperature=1
+            temperature=0.2
         )
         
         end_time = datetime.now()
@@ -127,7 +127,7 @@ def call_together_api(text, prompt, model_name):
                 {"role": "system", "content": prompt},
                 {"role": "user", "content": f"Please simplify this text: {text}"}
             ],
-            "temperature": 1
+            "temperature": 0.2
         }
         
         headers = {
